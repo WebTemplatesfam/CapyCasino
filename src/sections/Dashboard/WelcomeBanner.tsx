@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import favicon from 'public/favicon.png';
+import favicon from '@WebTemplatesfam/CapyCasino/blob/main/public/favicon.png';
 
 const Buttons = styled.div`
   overflow: hidden;
