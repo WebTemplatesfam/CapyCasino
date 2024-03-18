@@ -1,5 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import favicon from '../public/favicon.png';
 
 const Buttons = styled.div`
   overflow: hidden;
@@ -34,7 +35,7 @@ const Buttons = styled.div`
     color: black;
     cursor: pointer;
   }
-`
+`;
 
 const Welcome = styled.div`
   @keyframes welcome-fade-in {
@@ -69,6 +70,7 @@ const Welcome = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 20px;
+  position: relative;
 
   & img {
     animation-duration: 5s;
@@ -76,12 +78,11 @@ const Welcome = styled.div`
     animation-timing-function: ease-in-out;
     width: 100px;
     height: 100px;
-    top: 0;
-    right: 0;
-    &:nth-child(1) {animation-delay: 0s;}
-    &:nth-child(2) {animation-delay: 1s;}
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
   }
-
 
   & > div {
     padding: 0px;
@@ -94,28 +95,21 @@ const Welcome = styled.div`
       padding: 40px;
     }
   }
-`
+`;
 
 export function WelcomeBanner() {
   return (
     <Welcome>
+      <img src={favicon} alt="Favicon" />
       <div>
         <h1>Welcome to CapyCasino 👋</h1>
-        <p>
-          A fair, simple and decentralized casino on Solana.
-        </p>
+        <p>A fair, simple and decentralized casino on Solana.</p>
       </div>
       <Buttons>
-        <button onClick={() => window.open('https://www.mcapysol.xyz', '_blank')}>
-          Website
-        </button>
-        <button onClick={() => window.open('https://twitter.com/MCapySol', '_blank')}>
-          Twitter
-        </button>
-        <button onClick={() => window.open('https://t.me/MCapySol', '_blank')}>
-          Telegram
-        </button>
+        <button onClick={() => window.open('https://www.mcapysol.xyz', '_blank')}>Website</button>
+        <button onClick={() => window.open('https://twitter.com/MCapySol', '_blank')}>Twitter</button>
+        <button onClick={() => window.open('https://t.me/MCapySol', '_blank')}>Telegram</button>
       </Buttons>
     </Welcome>
-  )
+  );
 }
