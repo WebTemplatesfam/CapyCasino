@@ -100,20 +100,20 @@ export function WelcomeBanner() {
   return (
     <Welcome>
       <div>
-        <h1>Welcome to Gamba v2 👋</h1>
+        <h1>Welcome to CapyCasino 👋</h1>
         <p>
           A fair, simple and decentralized casino on Solana.
         </p>
       </div>
       <Buttons>
-        <button onClick={() => window.open('https://v2.gamba.so/', '_blank')}>
-          🚀 Add Liqudity
+        <button onClick={() => window.open('https://www.mcapysol.xyz', '_blank')}>
+          Website
         </button>
-        <button onClick={() => window.open('https://github.com/gamba-labs/gamba', '_blank')}>
-          👨‍💻 Build your own
+        <button onClick={() => window.open('https://twitter.com/MCapySol', '_blank')}>
+          Twitter
         </button>
-        <button onClick={() => window.open('https://discord.gg/HSTtFFwR', '_blank')}>
-          💬 Discord
+        <button onClick={() => window.open('https://t.me/MCapySol', '_blank')}>
+          Telegram
         </button>
       </Buttons>
     </Welcome>
