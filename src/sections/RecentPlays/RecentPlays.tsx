@@ -72,10 +72,12 @@ export default function RecentPlays() {
   return (
     <Container>
       {/* Header */}
-      <h2>Recent plays</h2>
+      <h2 style={{ textAlign: 'center' }}>Recent plays</h2>
       
       {/* Advertisement iframe */}
-      <iframe data-aa='2311473' src='//ad.a-ads.com/2311473?size=120x60' style={{ width: '120px', height: '60px', border: '0px', padding: '0', overflow: 'hidden', backgroundColor: 'transparent' }}></iframe>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <iframe data-aa='2311473' src='//ad.a-ads.com/2311473?size=120x60' style={{ width: '120px', height: '60px', border: '0px', padding: '0', overflow: 'hidden', backgroundColor: 'transparent' }}></iframe>
+      </div>
       
       {/* Share modal */}
       {selectedGame && (
