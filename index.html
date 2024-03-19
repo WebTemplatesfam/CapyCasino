@@ -16,21 +16,27 @@
 <div id="root"></div>
 <script src='https://terminal.jup.ag/main-v2.js'></script>
 <script>
-    const TEST_PLATFORM_FEE_AND_ACCOUNTS = {
-        referralAccount: "6ZTfLaoqVrWgvHehjPhhhhAvcUCLVDQR5FA3Gt2E9Vxd",
-        feeBps: 100,
-    };
+    // Encapsulate the widget functionality within a separate scope
+    function initializeWidget() {
+        const TEST_PLATFORM_FEE_AND_ACCOUNTS = {
+            referralAccount: "6ZTfLaoqVrWgvHehjPhhhhAvcUCLVDQR5FA3Gt2E9Vxd",
+            feeBps: 100,
+        };
 
-    window.Jupiter.init({
-        displayMode: "widget",
-        endpoint: "https://mainnet.helius-rpc.com/?api-key=be32ec7a-04f6-4ef6-bb4c-50fd512d9304",
-        strictTokenList: false,
-        formProps: {
-            fixedOutputMint: true,
-            initialOutputMint: "6zz62u9yEoZTe2efnnCyyHx5UUaPiThCngVxdYi8i4ix",
-        },
-        platformFeeAndAccounts: TEST_PLATFORM_FEE_AND_ACCOUNTS
-    });
+        window.Jupiter.init({
+            displayMode: "widget",
+            endpoint: "https://mainnet.helius-rpc.com/?api-key=be32ec7a-04f6-4ef6-bb4c-50fd512d9304",
+            strictTokenList: false,
+            formProps: {
+                fixedOutputMint: true,
+                initialOutputMint: "6zz62u9yEoZTe2efnnCyyHx5UUaPiThCngVxdYi8i4ix",
+            },
+            platformFeeAndAccounts: TEST_PLATFORM_FEE_AND_ACCOUNTS
+        });
+    }
+
+    // Call the function to initialize the widget
+    initializeWidget();
 </script>
 <script type="module">
     import * as buffer from 'buffer'
