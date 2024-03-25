@@ -106,7 +106,7 @@ export function WelcomeBanner() {
         </p>
       </div>
       <Buttons>
-        <button onClick={() => window.open('https://www.mcapysol.xyz', '_blank')}>
+        <button onClick={() => window.open('https://mcapysol.xyz', '_blank')}>
           Website
         </button>
         <button onClick={() => window.open('https://twitter.com/MCapySol', '_blank')}>
